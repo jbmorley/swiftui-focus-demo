@@ -19,4 +19,4 @@ In the process of playing around with this, I've come across a collection of lea
 - The language around focus just seems to be 'wrong' on macOS; on TV OS, it seems to be a proxy for selection, moving between selected buttons / shows using the remote, where the OS walks the view heirarchy to determine the selection. Tabs? Multi-selection? Highlight?
 
 
-SwiftUI is is a semantic model; this necessarily means that, as a starting point at least, it's not designed to make widgets. Instead, it assembles the platform widgets. Where that goes wrong is some of the basic functionality just doesn't exist.
+SwiftUI is attempting to walk the line between a declarative way to express UI, and a semantic representation of the user experience (or at least the high-level elements at play); this necessarily means that, as a starting point at least, it's not designed to make widgets. Instead, it assembles the platform widgets. Where that goes wrong is some of the basic functionality just doesn't exist.
