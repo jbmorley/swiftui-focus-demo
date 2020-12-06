@@ -33,7 +33,7 @@ struct ContentView: View {
             .padding()
             VStack {
                 Text(count != nil ? "Selected value: \(count!)" : "Counter not selected")
-                Text("Try clicking or tabbing around.")
+                Text("Try clicking or tabbing around, or pressing escape.")
                     .font(.caption)
             }
             .padding()
