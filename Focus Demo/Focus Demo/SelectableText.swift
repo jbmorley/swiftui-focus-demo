@@ -32,7 +32,7 @@ struct SelectableText: View {
         .onTapGesture {
             firstResponder = true
         }
-        .background(ResponderView(firstResponder: $firstResponder))
+        .acceptsFirstResponder(isFirstResponder: $firstResponder)
     }
 
 }

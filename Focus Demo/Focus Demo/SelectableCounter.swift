@@ -24,7 +24,7 @@ struct SelectableCounter: View {
         .cornerRadius(6)
         .overlay(RoundedRectangle(cornerRadius: 6)
                     .stroke(Color.pink, lineWidth: 2))
-        .background(ResponderView(firstResponder: $firstResponder))
+        .acceptsFirstResponder(isFirstResponder: $firstResponder)
         .foregroundColor(firstResponder ? .white : .black)
         .onTapGesture {
             firstResponder = true
