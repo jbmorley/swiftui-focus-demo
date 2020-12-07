@@ -16,6 +16,13 @@ struct ContentView: View {
         VStack {
             SelectableCounter()
                 .padding()
+                .onKeyDown { event -> Bool in
+                    if event.characters == "a" {
+                        print("a pressed")
+                        return true
+                    }
+                    return false
+                }
             SelectableText("Static text")
                 .padding()
             TextField("Click to select", text: $contents)

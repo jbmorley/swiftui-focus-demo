@@ -9,6 +9,15 @@ import SwiftUI
 
 struct ResponderView: NSViewRepresentable {
 
+    @Environment(\.keyDownHandlers) var keyDownHandlersInjected;
+
+    var keyDownHandlers: [(NSEvent) -> Bool]
+
+    init(firstResponder: Binding<Bool>, keyDownHandlers: [(NSEvent) -> Bool] = []) {
+        _firstResponder = firstResponder
+        self.keyDownHandlers = keyDownHandlers
+    }
+
     class Coordinator: NSObject {
         var parent: ResponderView
 
@@ -19,6 +28,7 @@ struct ResponderView: NSViewRepresentable {
         func didBecomeFirstResponder() { self.parent.firstResponder = true }
         func didResignFirstResponder() { self.parent.firstResponder = false }
         func shouldBeFirstResponder() -> Bool { self.parent.firstResponder }
+        func keyDown(with event: NSEvent) -> Bool { return self.parent.keyDown(with: event) }
     }
 
     class KeyboardView: NSView {
@@ -69,7 +79,27 @@ struct ResponderView: NSViewRepresentable {
             }
             return true
         }
+
+        override func keyDown(with event: NSEvent) {
+            guard let delegate = delegate else {
+                super.keyDown(with: event)
+                return
+            }
+            if !delegate.keyDown(with: event) {
+                super.keyDown(with: event)
+            }
+        }
     }
+
+    func onKeyDown(handler: @escaping (NSEvent) -> Bool) -> ResponderView {
+        var keyDownHandlers = Array(self.keyDownHandlers)
+        keyDownHandlers.append(handler)
+        return ResponderView(firstResponder: $firstResponder, keyDownHandlers: keyDownHandlers)
+    }
+
+    //        keyDownHandlers.append(handler)
+//    return self
+
 
     @Binding var firstResponder: Bool
 
@@ -87,6 +117,15 @@ struct ResponderView: NSViewRepresentable {
         DispatchQueue.main.async {
             view.updateResponder()
         }
+    }
+
+    func keyDown(with event: NSEvent) -> Bool {
+        for handler in keyDownHandlersInjected + keyDownHandlers {
+            if handler(event) {
+                return true
+            }
+        }
+        return false
     }
 
 }
