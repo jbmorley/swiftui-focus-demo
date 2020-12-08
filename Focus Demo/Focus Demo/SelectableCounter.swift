@@ -30,6 +30,9 @@ struct SelectableCounter: View {
             firstResponder = true
         }
         .focusedValue(\.count, $value)
+        .onSelectCommand {
+            print("space pressed")
+        }
         .onMoveCommand { direction in
             print(direction)
             switch direction {

@@ -17,6 +17,7 @@
 		D8B6D012257D329500C7E472 /* SelectableCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6D011257D329500C7E472 /* SelectableCounter.swift */; };
 		D8B6D017257D336600C7E472 /* SelectableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6D016257D336600C7E472 /* SelectableText.swift */; };
 		D8B6D01C257D934300C7E472 /* AcceptsFirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6D01B257D934300C7E472 /* AcceptsFirstResponder.swift */; };
+		D8B6D03F257F073F00C7E472 /* KeyEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6D03E257F073F00C7E472 /* KeyEventHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D8B6D011257D329500C7E472 /* SelectableCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCounter.swift; sourceTree = "<group>"; };
 		D8B6D016257D336600C7E472 /* SelectableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableText.swift; sourceTree = "<group>"; };
 		D8B6D01B257D934300C7E472 /* AcceptsFirstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptsFirstResponder.swift; sourceTree = "<group>"; };
+		D8B6D03E257F073F00C7E472 /* KeyEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyEventHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				D8B6D011257D329500C7E472 /* SelectableCounter.swift */,
 				D8B6D016257D336600C7E472 /* SelectableText.swift */,
 				D8B6D01B257D934300C7E472 /* AcceptsFirstResponder.swift */,
+				D8B6D03E257F073F00C7E472 /* KeyEventHandler.swift */,
 			);
 			path = "Focus Demo";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				D8B6D00D257D326300C7E472 /* ResponderView.swift in Sources */,
 				D8B6D012257D329500C7E472 /* SelectableCounter.swift in Sources */,
 				D8B6D01C257D934300C7E472 /* AcceptsFirstResponder.swift in Sources */,
+				D8B6D03F257F073F00C7E472 /* KeyEventHandler.swift in Sources */,
 				D8B6D017257D336600C7E472 /* SelectableText.swift in Sources */,
 				D8B6CFDE257D31B900C7E472 /* Focus_DemoApp.swift in Sources */,
 			);

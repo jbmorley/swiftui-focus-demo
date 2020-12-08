@@ -23,8 +23,18 @@ struct ContentView: View {
                     }
                     return false
                 }
+                .onKeyUp { event -> Bool in
+                    if event.characters == "b" {
+                        print("b pressed")
+                        return true
+                    }
+                    return false
+                }
             SelectableText("Static text")
                 .padding()
+                .onEnterCommand {
+                    print("on enter")
+                }
             TextField("Click to select", text: $contents)
                 .padding()
             VStack {
