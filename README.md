@@ -2,6 +2,8 @@
 
 Demo app created to play around with SwiftUI and focus on macOS
 
+![Main window](preview.png)
+
 ## Introduction
 
 This is a collection of experiments created to try to understand how focus and keyboard input behaves in SwiftUI, specificaly on macOS.
