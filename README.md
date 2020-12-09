@@ -1,4 +1,4 @@
-# swiftui-focus-demo
+# SwiftUI Focus Demo
 
 Demo app created to play around with SwiftUI and focus on macOS
 
